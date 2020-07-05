@@ -11,7 +11,7 @@ Pré-requis :
 # Etape 1 : Se connecter en SSH  
 
 Connectez-vous en SSH au Pi sur lequel vous voulez installer RPIEasy.  
-Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.
+Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.  
 `ssh pi@192.168.0.223`
 
 # Etape 2 : Télécharger et executer le script d'installation  
@@ -28,6 +28,12 @@ Si l'installation s'est bien déroulée, le script retourne ceci :
 
 Sinon, il faudra executer manuellement la commande de lancement et noter l'erreur :  
 `sudo python3.7 RPIEasy.py`
+
+# Etape 4 : Accéder à l'interface RPIEasy
+
+Ouvrez votre navigateur et saisissez l'adresse de votre pi dans la barre d'adresse.
+
+Vous tombez sur cette page :
 
 # Etape bonus :
 (merci ssfd pour le script)
