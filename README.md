@@ -16,16 +16,15 @@ Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.
 
 # Etape 2 : Télécharger et executer le script d'installation  
 
-`wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh`
-`chmod +x install_rpieasy.sh`
+`wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh`  
+`chmod +x install_rpieasy.sh`  
 `bash install_rpieasy.sh`
 
 # Etape 3 : Vérification d'installation  
 
 Si l'installation s'est bien déroulée, le script retourne ceci :  
-`RPIEasy installé et lancé  
-
-Depuis votre navigateur, saisissez : http://192.168.0.223  `
+`RPIEasy installé et lancé`  
+`Depuis votre navigateur, saisissez : http://192.168.0.223`
 
 Sinon, il faudra executer manuellement la commande de lancement et noter l'erreur :  
 `sudo python3.7 RPIEasy.py`
