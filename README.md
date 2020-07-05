@@ -1,6 +1,12 @@
 # RPIEasy-PluginEspeasy
 
 Voici un tuto décrivant l'installation de RPIEasy (adaptation du fameux ESPEasy pour les Raspberry) afin de transformer son Pi en objet multicapteurs.  
+Le gros avantage est qu'on peut se passer de WiFi pour piloter son Pi.  
+On peut également programmer ses réseaux : si WiFi down, utilise Ethernet, si Ethernet down, passer en AP. Et inversement...  
+La liste des Devices préprogrammés est assez bien fournie.  
+Le sujet qui explique le fonctionnement/principe : https://www.letscontrolit.com/forum/viewtopic.php?t=6237  
+Le github du projet : https://github.com/enesbcs/rpieasy  
+
 Le but de ce tuto étant de simplier l'installation des paquets/soft pour une intégration facile dans Jeedom, via le plugin Espeasy de Lunarok.  
 
 Pré-requis :
@@ -119,9 +125,12 @@ Etape en attente de validation par Lenif pour l'utilisation de son script...
   *Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.*  
   *Redémarrez le RPi.*  
 - Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé.  
-  *Supprimez les équipements à une seule commande info pour ne garder qu'un seul équipement.*
-  
+  *Supprimez les équipements à une seule commande info pour ne garder qu'un seul équipement.*. 
+- J'ai fait la mise à jour de RPIEasy, je ne retrouve plus mes Devices.  
+  *Pensez à sauvegarder votre config (Onglet Tools, Settings, Save), l'outil de mise à jour est capricieux.*  
   
 # Remerciements :  
 Merci à @enesbsc https://github.com/enesbcs/rpieasy  
 Merci à @Lenif https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
+Merci à @Lunarok  
+
