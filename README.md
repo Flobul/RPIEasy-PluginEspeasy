@@ -16,18 +16,24 @@ Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.
 
 # Etape 2 : Télécharger et executer le script d'installation  
 
-`wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh`  
-`chmod +x install_rpieasy.sh`  
-`bash install_rpieasy.sh`
+```
+wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh
+chmod +x install_rpieasy.sh
+bash install_rpieasy.sh
+```
 
 # Etape 3 : Vérification d'installation  
 
 Si l'installation s'est bien déroulée, le script retourne ceci :  
-`RPIEasy installé et lancé`  
-`Depuis votre navigateur, saisissez : http://192.168.0.223`
+```
+RPIEasy installé et lancé
+Depuis votre navigateur, saisissez : http://192.168.0.223
+```
 
 Sinon, il faudra executer manuellement la commande de lancement et noter l'erreur :  
-`sudo python3.7 RPIEasy.py`
+```
+sudo python3.7 RPIEasy.py
+```
 
 # Etape 4 : Accéder à l'interface RPIEasy
 
@@ -66,12 +72,40 @@ Vous tombez sur cette page :
   Un nouvel équipement devrait être créé :  
   ![Inclusion](/images/Inclusion.png)
 
+Et voilà ! Il ne reste plus qu'à raccorder ses sondes... au GPIO pour les exploiter depuis l'interface.
 
-# Etape bonus :
-(merci ssfd pour le script)
+# Etape 6 : Créer des commandes action
 
+On peut ajouter des commandes action à Jeedom pour redémarrer, arrêter, mettre à jour le RPiEasy.  
+Pour celà, il faut créer des Rules dans le RPIEasy.   
+* Cliquez sur l'onglet ![Rules](/images/Rules.png), et saisissez ceci dans le champ :  
 
+```
+on rpiupdate do // rpiupdate receive
+  SendToHTTP %ip%,80,/update?mode=rpi
+endon
+on aptupdate do // aptupdate receive
+  SendToHTTP %ip%,80,/update?mode=apt
+endon
+on pipupdate do // pipupdate receive
+  SendToHTTP %ip%,80,/update?mode=pip
+endon
+on reboot do // reboot receive
+  reboot
+endon
+on halt do // halt receive
+  SendToHTTP %ip%,80,/?cmd=halt
+endon
+```
+* Ensuite sur l'équipement dans le plugin Espeasy de Jeedom, créez des commandes comme ceci :  
+![CommandesRPIEasy](/images/CommandesRPIEasy.png)
+Puis enregistrez.
 
-Remerciements :
-Merci à @enesbsc https://github.com/enesbcs/rpieasy
-Merci à 
+# Etape bonus : Surveiller son EXPEasy via Jeedom
+Suite au problème de perte de WiFi, un reboot peut être nécessaire.  
+Voir le sujet : https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
+Le but de la manoeuvre est d'envoyer un ping vers le script sur Jeedom et le script renvoie un pong vers RPIeasy.  
+
+Remerciements :  
+Merci à @enesbsc https://github.com/enesbcs/rpieasy  
+Merci à @Lenif https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
