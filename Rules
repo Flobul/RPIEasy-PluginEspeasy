@@ -2,7 +2,7 @@ on system#boot do
   timerset,7,60
 endon
 on Rules#Timer=7 do // ping
-  SendToHTTP ip_de_jeedom,80,/plugins/script/core/ressources/espeasy.php?mode=update
+  SendToHTTP ip_de_jeedom,80,/plugins/script/data/espeasy.php?mode=update
   timerset,7,60
 endon
 on Pong do // pong receive
@@ -10,4 +10,20 @@ on Pong do // pong receive
 endon
 on Rules#Timer=8 do // no pong, reboot
   reboot
+endon
+
+on rpiupdate do // rpiupdate receive
+  SendToHTTP %ip%,80,/update?mode=rpi
+endon
+on aptupdate do // aptupdate receive
+  SendToHTTP %ip%,80,/update?mode=apt
+endon
+on pipupdate do // pipupdate receive
+  SendToHTTP %ip%,80,/update?mode=pip
+endon
+on reboot do // reboot receive
+  reboot
+endon
+on halt do // halt receive
+  SendToHTTP %ip%,80,/?cmd=halt
 endon
