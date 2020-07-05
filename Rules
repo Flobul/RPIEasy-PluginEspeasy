@@ -1,0 +1,13 @@
+on system#boot do
+  timerset,7,60
+endon
+on Rules#Timer=7 do // ping
+  SendToHTTP ip_de_jeedom,80,/plugins/script/core/ressources/espeasy.php?mode=update
+  timerset,7,60
+endon
+on Pong do // pong receive
+  timerset,8,130
+endon
+on Rules#Timer=8 do // no pong, reboot
+  reboot
+endon
