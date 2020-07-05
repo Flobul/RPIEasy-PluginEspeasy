@@ -8,16 +8,27 @@ Pré-requis :
 - un OS installé sur le Pi (Raspbian Buster, Ubuntu... et d'autres dérivés),  
 - une console/un terminal permettant de se connecter au Raspberry en SSH.  
 
-# Etape 1 : Se connecter en SSH
+# Etape 1 : Se connecter en SSH  
 
 Connectez-vous en SSH au Pi sur lequel vous voulez installer RPIEasy.  
 Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.
 `ssh pi@192.168.0.223`
 
-# Etape 1 : Télécharger et executer le script d'installation
+# Etape 2 : Télécharger et executer le script d'installation  
 
-`wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh
-chmod +x install_rpieasy.sh`
+`wget https://github.com/Flobul/RPIEasy-PluginEspeasy/raw/master/install_rpieasy.sh`
+`chmod +x install_rpieasy.sh`
+`bash install_rpieasy.sh`
+
+# Etape 3 : Vérification d'installation  
+
+Si l'installation s'est bien déroulée, le script retourne ceci :  
+`RPIEasy installé et lancé  
+
+Depuis votre navigateur, saisissez : http://192.168.0.223  `
+
+Sinon, il faudra executer manuellement la commande de lancement et noter l'erreur :  
+`sudo python3.7 RPIEasy.py`
 
 # Etape bonus :
 (merci ssfd pour le script)
