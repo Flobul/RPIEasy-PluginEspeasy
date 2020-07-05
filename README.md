@@ -104,14 +104,15 @@ on halt do // halt receive
 endon
 ```
 * Ensuite sur l'équipement dans le plugin Espeasy de Jeedom, créez des commandes comme ceci :  
-![CommandesRPIEasy](/images/CommandesRPIEasy.png)
+![CommandesRPIEasy](/images/CommandesRPIEasy.png)  
 Puis enregistrez.
 
-# Etape 7 : Installer les dépendances nécessaires en fonction de l'utilisation que vous en faites
+# Etape 7 : Installer les dépendances nécessaires en fonction de l'utilisation que vous en faites. 
 
 Dans l'onglet ![Hardware](/images/Hardware.png), cliquez sur 'Plugin&controller dependencies' et cliquez sur la dépendance dont vous avez besoin (GPIO, I2C...)  
 
-# Etape bonus : Surveiller son EXPEasy via Jeedom  
+# Etape bonus : Surveiller son ESPEasy via Jeedom  
+
 Suite au problème de perte de WiFi, un reboot peut être nécessaire.  
 Voir le sujet : https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
 Le but de la manoeuvre est d'envoyer un ping vers le script sur Jeedom et le script renvoie un pong vers RPIeasy.  
@@ -125,7 +126,7 @@ Etape en attente de validation par Lenif pour l'utilisation de son script...
   *Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.*  
   *Redémarrez le RPi.*  
 - Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé.  
-  *Supprimez les équipements à une seule commande info pour ne garder qu'un seul équipement.*. 
+  *Supprimez les équipements à une seule commande info pour ne garder qu'un seul équipement.*  
 - J'ai fait la mise à jour de RPIEasy, je ne retrouve plus mes Devices.  
   *Pensez à sauvegarder votre config (Onglet Tools, Settings, Save), l'outil de mise à jour est capricieux.*  
   
