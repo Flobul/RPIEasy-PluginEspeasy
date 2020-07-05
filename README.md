@@ -1,7 +1,7 @@
 # RPIEasy-PluginEspeasy
 
 Voici un tuto décrivant l'installation de RPIEasy (adaptation du fameux ESPEasy pour les Raspberry) afin de transformer son Pi en objet multicapteurs.  
-Le gros avantage est qu'on peut se passer de WiFi pour piloter son Pi.  
+Le gros avantage est qu'on peut se passer de WiFi pour piloter son Pi, à l'instar des ESP sans port ethernet.  
 On peut également programmer ses réseaux : si WiFi down, utilise Ethernet, si Ethernet down, passer en AP. Et inversement...  
 La liste des Devices préprogrammés est assez bien fournie.  
 Le sujet qui explique le fonctionnement/principe : https://www.letscontrolit.com/forum/viewtopic.php?t=6237  
