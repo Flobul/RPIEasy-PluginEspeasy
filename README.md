@@ -101,11 +101,27 @@ endon
 ![CommandesRPIEasy](/images/CommandesRPIEasy.png)
 Puis enregistrez.
 
-# Etape bonus : Surveiller son EXPEasy via Jeedom
+# Etape 7 : Installer les dépendances nécessaires en fonction de l'utilisation que vous en faites
+
+Dans l'onglet ![Hardware](/images/Hardware.png), cliquez sur 'Plugin&controller dependencies' et cliquez sur la dépendance dont vous avez besoin (GPIO, I2C...)  
+
+# Etape bonus : Surveiller son EXPEasy via Jeedom  
 Suite au problème de perte de WiFi, un reboot peut être nécessaire.  
 Voir le sujet : https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
 Le but de la manoeuvre est d'envoyer un ping vers le script sur Jeedom et le script renvoie un pong vers RPIeasy.  
+Etape en attente de validation par Lenif pour l'utilisation de son script...  
 
-Remerciements :  
+# FAQ :  
+- Mon RPI ne se connecte pas en WiFi. Comment faire ?  
+  *Il se peut que le WiFi soit bloqué. Vérifier son état avec la commande 'rfkill list' en SSH. ('rfkill unblock X' pour débloquer)*  
+  *Dans l'onglet 'Config', une fois qu'il apparaît dans 'Primary network device:' allez dans l'onglet 'Hardware' et cliquez sur 'Scan Wifi networks'*	 
+  *Si les réseau environnant s'affichent, c'est que tout est bon.*  
+  *Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.*  
+  *Redémarrez le RPi.*  
+- Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé.  
+  *Supprimez les équipements à une seule commande info pour ne garder qu'un seul équipement.*
+  
+  
+# Remerciements :  
 Merci à @enesbsc https://github.com/enesbcs/rpieasy  
 Merci à @Lenif https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
