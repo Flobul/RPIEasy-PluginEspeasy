@@ -142,7 +142,7 @@ Etape en attente de validation par Lenif pour l'utilisation de son script...
   *Pensez à sauvegarder votre config (Onglet Tools, Settings, Save), l'outil de mise à jour est capricieux.*  
   
 # Remerciements :  
-Merci à @enesbsc https://github.com/enesbcs/rpieasy  
-Merci à @Lenif https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
+Merci à @enesbsc [https://github.com/enesbcs/rpieasy](https://github.com/enesbcs/rpieasy)  
+Merci à @Lenif [https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485](https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485)  
 Merci à @Lunarok  
 
