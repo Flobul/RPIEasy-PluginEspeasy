@@ -1,9 +1,9 @@
 #!/bin/bash
-# Version 0.10
+# Version 0.11
 # Commandes pour installer easeasy
 
 # installe les paquets nécessaires
-sudo apt install python3-pip screen alsa-utils wireless-tools wpasupplicant zip unzip git -y
+sudo apt install curl python3-pip screen alsa-utils wireless-tools wpasupplicant zip unzip git -y
 
 # télécharge le git RPIEasy
 git clone https://github.com/enesbcs/rpieasy.git
@@ -30,5 +30,5 @@ if [ $HTTP_CODE -eq 200 ];
   then echo -e "RPIEasy installé et lancé\n"
   echo -e "Depuis votre navigateur, saisissez : http://${MY_IP}"
 else echo -e "RPIEasy non lancé\n"
-  echo -e "Veuillez vérifier en lançant \"sudo python3.7 RPIEasy.py\""
+  echo -e "Veuillez vérifier en lançant \"python3.7 RPIEasy.py\""
 fi
