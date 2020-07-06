@@ -131,7 +131,7 @@ Le but de la manoeuvre est d'envoyer un ping vers le script sur Jeedom et le scr
 Etape en attente de validation par Lenif pour l'utilisation de son script...  
 
 # FAQ :  
-- Mon RPI ne se connecte pas en WiFi. Comment faire ?  
+- Mon RPI ne se connecte pas en WiFi. Comment faire ?
   ```
   Il se peut que le WiFi soit bloqué. Vérifier son état avec la commande 'rfkill list' en SSH. ('rfkill unblock all' pour débloquer)  
   Dans l'onglet 'Config', une fois qu'il apparaît dans 'Primary network device:' allez dans l'onglet 'Hardware' et cliquez sur 'Scan Wifi networks'	 
@@ -139,11 +139,15 @@ Etape en attente de validation par Lenif pour l'utilisation de son script...
   Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.  
   Redémarrez le RPi.  
   ```
-- Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé alors que j'en ai qu'un seul.  
-  *Supprimez les équipements qui n'ont qu'une seule commande info pour ne garder qu'un seul équipement (en général, il y a un équipement qui a toutes les commandes et les autres en ont une seule).*  
-- J'ai fait la mise à jour de RPIEasy, je ne retrouve plus mes Devices.  
-  *Rechargez la configuration précédemment sauvegardée.*  
-  *Pensez à sauvegarder votre config (Onglet Tools, Settings, Save), l'outil de mise à jour est capricieux.*  
+- Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé alors que j'en ai qu'un seul.
+  ```
+  Supprimez les équipements qui n'ont qu'une seule commande info pour ne garder qu'un seul équipement (en général, il y a un équipement qui a toutes les commandes et les autres en ont une seule).  
+  ```
+- J'ai fait la mise à jour de RPIEasy, je ne retrouve plus mes Devices.
+  ```
+  Rechargez la configuration précédemment sauvegardée.*  
+  Pensez à sauvegarder votre config (Onglet Tools, Settings, Save), l'outil de mise à jour est capricieux.*  
+  ```
   
 # Remerciements :  
 Merci à @enesbsc [https://github.com/enesbcs/rpieasy](https://github.com/enesbcs/rpieasy)  
