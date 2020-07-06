@@ -19,7 +19,9 @@ Pré-requis :
 
 Connectez-vous en SSH au Pi sur lequel vous voulez installer RPIEasy.  
 Le mot de passe par défaut du compte SSH sur Raspbian est `raspberry`.  
-`ssh pi@192.168.0.223`
+```
+ssh pi@192.168.0.223
+```
 
 # Etape 2 : Télécharger et executer le script d'installation  
 
@@ -74,7 +76,7 @@ Vous tombez sur cette page :
     * Enabled: `Cochez`  
     * Indicator1à4: `choisissez les infos que vous voulez remonter`  
     * Send to Controller: `Cochez`  
-    * Dans Value, affectez les noms au valeur récupérées, ce seront les noms qui seront remontés à Jeedom.  
+    * Dans Values, affectez les noms aux valeur récupérées, ce seront les noms qui seront remontés à Jeedom.  
   Cliquez sur Submit.
 
 * Redémarrez le RPi pour appliquer les précédents changements.  
@@ -114,7 +116,7 @@ Puis enregistrez.
 
 # Etape 7 : Installer les dépendances nécessaires en fonction de l'utilisation que vous en faites  
 
-Dans l'onglet ![Hardware](/images/Hardware.png), cliquez sur 'Plugin&controller dependencies' et cliquez sur la dépendance dont vous avez besoin (GPIO, I2C...)  
+Dans l'onglet ![Hardware](/images/Hardware.png), cliquez sur *Plugin&controller dependencies*, puis sur la dépendance dont vous avez besoin (GPIO, I2C...).  
 
 # Etape 8 : Brancher les capteurs et autres devices  
 
@@ -124,17 +126,19 @@ Et pensez à effectuer des sauvegardes de la config assez régulièrement.
 # Etape bonus : Surveiller son ESPEasy via Jeedom  
 
 Suite au problème de perte de WiFi, un reboot peut être nécessaire.  
-Voir le sujet : https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485  
+Voir le sujet : [https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485](https://community.jeedom.com/t/maintenir-les-esp-en-ligne/24485)  
 Le but de la manoeuvre est d'envoyer un ping vers le script sur Jeedom et le script renvoie un pong vers RPIeasy.  
 Etape en attente de validation par Lenif pour l'utilisation de son script...  
 
 # FAQ :  
 - Mon RPI ne se connecte pas en WiFi. Comment faire ?  
-  *Il se peut que le WiFi soit bloqué. Vérifier son état avec la commande 'rfkill list' en SSH. ('rfkill unblock all' pour débloquer)*  
-  *Dans l'onglet 'Config', une fois qu'il apparaît dans 'Primary network device:' allez dans l'onglet 'Hardware' et cliquez sur 'Scan Wifi networks'*	 
-  *Si les réseaux environnants s'affichent, c'est que tout est bon.*  
-  *Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.*  
-  *Redémarrez le RPi.*  
+  ```
+  Il se peut que le WiFi soit bloqué. Vérifier son état avec la commande 'rfkill list' en SSH. ('rfkill unblock all' pour débloquer)  
+  Dans l'onglet 'Config', une fois qu'il apparaît dans 'Primary network device:' allez dans l'onglet 'Hardware' et cliquez sur 'Scan Wifi networks'	 
+  Si les réseaux environnants s'affichent, c'est que tout est bon.  
+  Dans l'onglet 'Config', pensez à configurer 'Wifi Settings'.  
+  Redémarrez le RPi.  
+  ```
 - Lors de l'inclusion, dans le plugin Espeasy de Jeedom, plusieurs équipements ont été créé alors que j'en ai qu'un seul.  
   *Supprimez les équipements qui n'ont qu'une seule commande info pour ne garder qu'un seul équipement (en général, il y a un équipement qui a toutes les commandes et les autres en ont une seule).*  
 - J'ai fait la mise à jour de RPIEasy, je ne retrouve plus mes Devices.  
