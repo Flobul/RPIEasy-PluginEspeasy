@@ -3,9 +3,8 @@ Le gros avantage est qu'on peut se passer de WiFi pour piloter son Pi, à l'inst
 On peut également programmer ses réseaux : si WiFi down, utilise Ethernet, si Ethernet down, passer en AP. Et inversement...  
 La liste des Devices préprogrammés est assez bien fournie.  
 
-
-Le sujet qui explique le principe : https://www.letscontrolit.com/forum/viewtopic.php?t=6237  
-Le github du projet : https://github.com/enesbcs/rpieasy  
+Le sujet qui explique le principe : [https://www.letscontrolit.com/forum/viewtopic.php?t=6237](https://www.letscontrolit.com/forum/viewtopic.php?t=6237)  
+Le github du projet : [https://github.com/enesbcs/rpieasy](https://github.com/enesbcs/rpieasy)  
 
 
 Le but de ce tuto étant de simplier l'installation des paquets/soft pour une intégration facile dans Jeedom, via le plugin Espeasy de Lunarok.  
