@@ -1,1 +1,25 @@
 theme: jekyll-theme-cayman
+languages: ["en", "fr", "es"]
+exclude_from_localizations: ["assets", "CNAME"]
+defaultLang: fr
+langs: [fr_FR] 
+languageNames:
+  fr: Français
+sass:
+  sass_dir: assets/css
+  style: compressed
+markdown: kramdown
+permalink: /404.html
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+gems:
+- jekyll-paginate
+- jekyll-seo-tag
+exclude:
+- vendor
+plugins:
+- jekyll-seo-tag
+title: "Documentation RPIEasy pour plugin ESPeasy"
+description: "RPIEasy pour plugin ESPeasy"
