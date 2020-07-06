@@ -16,7 +16,7 @@ sudo pip3 install jsonpickle
 sudo apt install net-tools
 
 # lance la session de RPIEasy
-screen -d -m bash -c "sudo python3.7 RPIEasy.py"
+screen -d -m bash -c "python3.7 RPIEasy.py"
 
 sleep 5
 # récupère le code d'erreur de la page RPIEasy
