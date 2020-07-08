@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 0.11
+# Version 0.12
 # Commandes pour installer easeasy
 
 # installe les paquets nécessaires
@@ -18,7 +18,7 @@ sudo apt install net-tools
 # lance la session de RPIEasy
 screen -d -m bash -c "python3.7 RPIEasy.py"
 
-sleep 5
+sleep 7 #temps à définir (problème rencontré)
 # récupère le code d'erreur de la page RPIEasy
 HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" localhost)
 
