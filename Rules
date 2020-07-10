@@ -25,5 +25,5 @@ on reboot do // reboot receive
   reboot
 endon
 on halt do // halt receive
-  SendToHTTP %ip%,80,/?cmd=halt
+  halt
 endon
